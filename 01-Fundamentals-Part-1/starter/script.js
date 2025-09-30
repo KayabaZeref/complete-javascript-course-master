@@ -42,5 +42,14 @@ console.log(ageJonas, ageSarah);
 console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 
 const firstName = "Jonas";
-const lastName = "Schmedtmann";
+// const lastName = "Schmedtmann";
+lastName = "Schmedtmann";
 console.log(firstName + " " + lastName);
+
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1
+x--; // x = x - 1
+x--;
+console.log(x);
