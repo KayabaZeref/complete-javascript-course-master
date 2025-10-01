@@ -85,3 +85,22 @@ lines");
 console.log(`String
 multiple
 lines`);
+
+//18: Taking Decisions: if / else Statements
+const age3 = 15;
+const isOldEnough = age3 >= 18;
+if (isOldEnough) {
+    console.log("Sarah can start driving license 🚗");
+} else {
+    const yearsLeft = 18 - age3;
+    console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+
+const birthYear3 = 2012;
+let century;
+if (birthYear3 <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
