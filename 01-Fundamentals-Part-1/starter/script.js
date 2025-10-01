@@ -66,3 +66,22 @@ console.log(a, b);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
+
+const firstName2 = "Jonas";
+const job2 = "teacher";
+const birthYear2 = 1991;
+const year2 = 2037;
+
+const jonas = "I'm " + firstName2 + ", a " + (year2 - birthYear2) + " years old " + job2 + "!";
+console.log(jonas);
+// Using `` (template literals) instead of "" (quotes) or '' (apostrophes) for strings
+const jonasNew = `I'm ${firstName2}, a ${year2 - birthYear2} years old ${job2}!`;
+console.log(jonasNew);
+console.log(`Just a regular string...`);
+
+console.log("String with \n\
+multiple \n\
+lines");
+console.log(`String
+multiple
+lines`);
