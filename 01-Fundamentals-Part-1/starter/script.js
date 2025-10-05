@@ -147,3 +147,36 @@ if (height) { // height is defined
 } else {
     console.log("Height is UNDEFINED");
 }
+
+// 22: Equality Operators: == vs. ===
+// equality operators
+const age4 = 18;
+// strict equality operator (type + value)
+// '18' === 18 -> false
+if (age4 === 18) console.log("You just became an adult :D (strict)");
+// loose equality operator (only value)
+// '18' == 18 -> true
+if (age4 == 18) console.log("You just became an adult :D (loose)");
+
+// prompt function always returns a string
+const favorite = Number(prompt("What's your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+if (favorite === 23) { // 23 === 23
+    console.log("Cool! 23 is an amazing number!");
+} else if (favorite === 7) {
+    console.log("7 is also a cool number");
+} else if (favorite === 9) {
+    console.log("9 is also a cool number");
+} else {
+    console.log("Number is not 23 or 7 or 9");
+}
+
+// != loose inequality operator
+// !== strict inequality operator
+if (favorite !== 23) console.log("Why not 23?");
+
+// 23: Logical Operators
+const hasDriversLicense = true; // A
+const hasGoodVision = true; // B
