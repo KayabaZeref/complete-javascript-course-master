@@ -159,9 +159,12 @@ if (age4 === 18) console.log("You just became an adult :D (strict)");
 if (age4 == 18) console.log("You just became an adult :D (loose)");
 
 // prompt function always returns a string
-const favorite = Number(prompt("What's your favorite number?"));
-console.log(favorite);
-console.log(typeof favorite);
+// const favorite = Number(prompt("What's your favorite number?"));
+// console.log(favorite);
+// console.log(typeof favorite);
+
+// For quick testing, you can use the following line instead of the prompt function
+const favorite = 23;
 
 if (favorite === 23) { // 23 === 23
     console.log("Cool! 23 is an amazing number!");
@@ -177,6 +180,27 @@ if (favorite === 23) { // 23 === 23
 // !== strict inequality operator
 if (favorite !== 23) console.log("Why not 23?");
 
-// 23: Logical Operators
+// 23: Boolean Logic and 24: Logical Operators
 const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
+
+// Minimize the use of console.log for better performance
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasDriversLicense);
+// console.log(!hasGoodVision);
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+// if (shouldDrive) {
+//     console.log("Sarah is able to drive!");
+// } else {
+//     console.log("Someone else should drive...");
+// }
+
+const isTired = false; // C
+// console.log(hasDriversLicense && hasGoodVision && isTired);
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive...");
+}
