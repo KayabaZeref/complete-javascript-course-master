@@ -106,3 +106,83 @@ const yearsUntilRetirement2 = function (birthYear, firstName) {
 
 console.log(yearsUntilRetirement2(1991, 'Jonas'));
 console.log(yearsUntilRetirement2(1950, 'Mike'));
+
+// 40. Introduction to Arrays
+// const friend1 = 'Michael';
+// const friend2 = 'Steven';
+// const friend3 = 'Peter';
+// const friends = ['Michael', 'Steven', 'Peter'];
+// console.log(friends);
+
+// const y = new Array(1991, 1984, 2008, 2020);
+// console.log(y);
+
+// console.log(friends[0]);
+// console.log(friends[2]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = 'Jay';
+// console.log(friends);
+// // friends = ['Bob', 'Alice'] // This will error because friends is a const
+
+// const firstName = 'Jonas';
+// const jonas = [firstName, 'Schmedtmann', 2037 - 1991, 'teacher', friends];
+// console.log(jonas);
+// console.log(jonas.length);
+
+// // Exercise
+// const calcAge4 = function (birthYear) {
+//     return 2037 - birthYear;
+// };
+// const years = [1990, 1967, 2002, 2010, 2018];
+// const age4 = calcAge4(years[0]);
+// const age5 = calcAge4(years[1]);
+// const age6 = calcAge4(years[years.length - 1]);
+// console.log(age4, age5, age6);
+
+// const ages = [
+//     calcAge4(years[0]),
+//     calcAge4(years[1]),
+//     calcAge4(years[years.length - 1])
+// ];
+// console.log(ages);
+
+// 41. Basic Array Operations (Methods)
+const friends = ['Michael', 'Steven', 'Peter'];
+// Add elements
+const newLength = friends.push('Jay');
+console.log(friends);
+console.log(newLength);
+
+// Add elements to the beginning
+friends.unshift('John');
+console.log(friends);
+
+// Remove elements
+// Remove last
+const popped = friends.pop();
+console.log(friends);
+console.log(popped);
+
+// Remove first
+friends.shift();
+console.log(friends);
+
+// Get indexes, return the index of the element
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+// Includes, which returns boolean
+friends.push(23);
+console.log(friends);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes(23));
+
+if (friends.includes('Steven')) {
+    console.log('You have a friend called Steven');
+}
+
+// friends.includes('Michael') ? console.log('You have a friend called Michael') : console.log('No friend called Michael');
