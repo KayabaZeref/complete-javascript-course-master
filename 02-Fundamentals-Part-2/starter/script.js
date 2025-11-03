@@ -150,39 +150,128 @@ console.log(yearsUntilRetirement2(1950, 'Mike'));
 // console.log(ages);
 
 // 41. Basic Array Operations (Methods)
-const friends = ['Michael', 'Steven', 'Peter'];
-// Add elements
-const newLength = friends.push('Jay');
-console.log(friends);
-console.log(newLength);
+// const friends = ['Michael', 'Steven', 'Peter'];
+// // Add elements
+// const newLength = friends.push('Jay');
+// console.log(friends);
+// console.log(newLength);
 
-// Add elements to the beginning
-friends.unshift('John');
-console.log(friends);
+// // Add elements to the beginning
+// friends.unshift('John');
+// console.log(friends);
 
-// Remove elements
-// Remove last
-const popped = friends.pop();
-console.log(friends);
-console.log(popped);
+// // Remove elements
+// // Remove last
+// const popped = friends.pop();
+// console.log(friends);
+// console.log(popped);
 
-// Remove first
-friends.shift();
-console.log(friends);
+// // Remove first
+// friends.shift();
+// console.log(friends);
 
-// Get indexes, return the index of the element
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+// // Get indexes, return the index of the element
+// console.log(friends.indexOf('Steven'));
+// console.log(friends.indexOf('Bob'));
 
-// Includes, which returns boolean
-friends.push(23);
-console.log(friends);
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
+// // Includes, which returns boolean
+// friends.push(23);
+// console.log(friends);
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(23));
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend called Steven');
-}
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend called Steven');
+// }
 
 // friends.includes('Michael') ? console.log('You have a friend called Michael') : console.log('No friend called Michael');
+
+// 42. Introduction to Objects
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     age: 2037 - 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// };
+// console.log(jonas);
+
+// 43. Dot vs. Bracket Notation
+// The jonnas object from previous lesson
+// console.log(jonas.lastName);
+// console.log(jonas['lastName']);
+
+// const nameKey = 'Name';
+// // first + nameKey = firstName
+// console.log(jonas['first' + nameKey]);
+// console.log(jonas['last' + nameKey]);
+
+// // const interestedIn = prompt('What do you want to know about Jonas? Choose between firstName, lastName, age, job, and friends');
+// // // User answer is stored in interestedIn variable
+// // if (jonas[interestedIn]) {
+// //     console.log(jonas[interestedIn]);
+// // } else {
+// //     console.log('Wrong request! Choose between firstName, lastName, age, job, and friends');
+// // }
+
+// jonas.location = 'Portugal';
+// jonas['twitter'] = '@jonasschmedtman';
+// console.log(jonas);
+
+// // Challenge
+// // "Jonas has 3 friends, and his best friend is called Michael"
+// console.log(`${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`);
+
+
+// 44. Object Methods
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    birthYear: 1991,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    // hasDriversLicense: false,
+    hasDriversLicense: true,
+
+    // First way
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthYear;
+    // }
+
+    // Second way
+    // calcAge: function () {
+    //     // Why not jonas.birthYear?
+    //     // because this key word points to the object calling the method
+    //     // If we use jonas.birthYear, and change to jonas2 later, it will still point to jonas object
+    //     // console.log(this);
+    //     return 2037 - this.birthYear;
+    // }
+
+    // Third way, storing the value in the object itself
+    calcAge: function () {
+        //this will create a new key age in jonas object
+        this.age = 2037 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+    }
+};
+
+// First way
+// console.log(jonas.calcAge(jonas.birthYear));
+
+// Second way
+// console.log(jonas.calcAge());
+
+// Third way
+console.log(jonas.calcAge());
+console.log(jonas.age);
+console.log(jonas.age);
+
+
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a/no driver's license"
+console.log(jonas.getSummary());
