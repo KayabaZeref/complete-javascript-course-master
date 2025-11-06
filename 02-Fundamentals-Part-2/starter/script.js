@@ -275,3 +275,60 @@ console.log(jonas.age);
 // Challenge
 // "Jonas is a 46-year old teacher, and he has a/no driver's license"
 console.log(jonas.getSummary());
+
+// 45. Iteration: The for Loop
+// console.log('Lifting weights repetition 1 🏋️‍♀️');
+// console.log('Lifting weights repetition 2 🏋️‍♀️')
+// console.log('Lifting weights repetition 3 🏋️‍♀️');
+// console.log('Lifting weights repetition 4 🏋️‍♀️') 
+// console.log('Lifting weights repetition 5 🏋️‍♀️')
+// console.log('Lifting weights repetition 6 🏋️‍♀️')
+// console.log('Lifting weights repetition 7 🏋️‍♀️')
+// console.log('Lifting weights repetition 8 🏋️‍♀️')
+// console.log('Lifting weights repetition 9 🏋️‍♀️')
+// console.log('Lifting weights repetition 10 🏋️‍♀️')
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+}
+
+// 46. Looping Arrays, Breaking and Continuing
+const jonas2 = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+const types = [];
+for (let i = 0; i < jonas2.length; i++) {
+    // Reading from jonas2 array
+    console.log(jonas2[i], typeof jonas2[i]);
+    // Filling types array
+    // types[i] = typeof jonas2[i];
+    types.push(typeof jonas2[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// Continue and Break
+// Continue is to skip current iteration
+console.log('--- ONLY STRINGS ---');
+for (let i = 0; i < jonas2.length; i++) {
+    // if the element is not a string, skip to next iteration
+    if (typeof jonas2[i] !== 'string') continue;
+    console.log(jonas2[i], typeof jonas2[i]);
+}
+// Break is to completely stop the loop
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i < jonas2.length; i++) {
+    if (typeof jonas2[i] === 'number') break;
+    console.log(jonas2[i], typeof jonas2[i]);
+}
